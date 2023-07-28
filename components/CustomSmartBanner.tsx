@@ -23,7 +23,7 @@ const CustomSmartBanner = () => {
         init()
 
     }, [])
-    alert(showCustomBanner);
+    
     return (
         showCustomBanner &&   <SmartBanner
             title={"playground"}
