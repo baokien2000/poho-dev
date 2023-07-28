@@ -8,7 +8,7 @@ const CustomSmartBanner = () => {
     const [showCustomBanner, setShowCustomBanner] = useState(true)
 
     useEffect(() => {
-        const init = async () => {
+        const init =  () => {
             //@ts-ignore
             var iOS = !window.MSStream && /iPad|iPhone|iPod/.test(navigator.userAgent); // fails on iPad iOS 13
   
@@ -19,9 +19,11 @@ const CustomSmartBanner = () => {
                 }
  
             }
-            alert(init())
         }
-        }, [])
+        init()
+
+    }, [])
+    alert(showCustomBanner);
     return (
         showCustomBanner &&   <SmartBanner
             title={"playground"}

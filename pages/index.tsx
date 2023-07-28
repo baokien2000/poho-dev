@@ -10,14 +10,10 @@ import CustomSmartBanner from "@/components/CustomSmartBanner";
 
 {/* <main className={`flex min-h-screen flex-col items-center justify-between  ${inter.className}`}> */}
 export default function Home() {
-    const [banner,setBanner] = useState<any>()
-    useEffect(() => {
-        setBanner(<CustomSmartBanner />) 
-    }, [])
     return (
         <main className={`flex min-h-screen flex-col items-center justify-between`} >
             {/*LandingPage 1 */}
-            {banner}
+            <CustomSmartBanner />
             <div className="w-full flex flex-row h-[calc(100vh-96px)] items-center">
                 <div className="w-2/5">
                     <h1>POHO - ỨNG DỤNG NHẮN TIN ĐA NĂNG </h1>
